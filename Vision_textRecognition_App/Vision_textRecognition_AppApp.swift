@@ -11,7 +11,7 @@ import SwiftUI
 struct Vision_textRecognition_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainVisionView()
         }
     }
 }
