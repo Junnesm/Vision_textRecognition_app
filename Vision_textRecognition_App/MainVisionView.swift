@@ -10,9 +10,7 @@ import SwiftUI
 struct MainVisionView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+           Image("👓")
             Text("Hello, world!")
         }
         .padding()
