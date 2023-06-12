@@ -1,0 +1,51 @@
+//
+//  ContentView.swift
+//  Vision_textRecognition_App
+//
+//  Created by Junne Murdock on 6/7/23.
+//
+
+import SwiftUI
+
+import SwiftUI
+
+struct ContentView: View {
+    @State private var showScannerSheet = false
+    @State private var texts: [ScanData] = []
+    var body: some View {
+        NavigationView{
+            VStack {
+                if texts.count > 0{
+                    List {
+                        ForEach(texts) {text in
+                            NavigationLink( destination: ScrollView{Text(text.content)}, label: {
+                                Text(text.content).lineLimit(1)
+                            })
+                        }
+                    }
+                }
+                else{
+                    
+                    Text("No scan yet").font(.title)
+                }
+            }
+                .navigationTitle("Scan OCR")
+                .navigationBarItems(trailing:
+                                        Button(action: { self.showScannerSheet = true }, label: {
+                    Image(systemName: "doc.text.viewfinder")
+                        .font(.title)
+                    
+                })
+                .sheet(isPresented: $showScannerSheet, content: {
+                    
+                })
+            )
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

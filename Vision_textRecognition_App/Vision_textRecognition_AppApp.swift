@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Vision_textRecognition_AppApp: App {
+struct MTG_PracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            MainVisionView()
+            ContentView()
         }
     }
 }
