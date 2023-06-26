@@ -29,7 +29,7 @@ struct ContentView: View {
                     Text("No scan yet").font(.title)
                 }
             }
-                .navigationTitle("Scan OCR")
+                .navigationTitle("Scan Card")
                 .navigationBarItems(trailing:
                                         Button(action: { self.showScannerSheet = true }, label: {
                     Image(systemName: "doc.text.viewfinder")
@@ -37,10 +37,20 @@ struct ContentView: View {
                     
                 })
                 .sheet(isPresented: $showScannerSheet, content: {
-                    
+                  makeScannerView()
                 })
             )
         }
+    }
+    private func makeScannerView()-> ScannerView {
+        ScannerView(completion: {
+            textPerPage in
+            if let outputText = textPerPage?.joined(separator: "\n").trimmingCharacters(in: .whitespacesAndNewlines){
+                let newScanData = ScanData(content: outputText)
+                self.texts.append(newScanData)
+            }
+            self.showScannerSheet = false
+        })
     }
 }
 

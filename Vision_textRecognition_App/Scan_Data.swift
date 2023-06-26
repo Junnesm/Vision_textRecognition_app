@@ -5,6 +5,9 @@
 //  Created by Junne Murdock on 6/11/23.
 //
 
+
+//to identify what the scan is looking for
+
 import Foundation
 struct ScanData: Identifiable {
     var id = UUID()

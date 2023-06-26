@@ -15,6 +15,9 @@
 		23154D612A315CF800D4A858 /* Vision_textRecognition_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23154D602A315CF800D4A858 /* Vision_textRecognition_AppUITests.swift */; };
 		23154D632A315CF800D4A858 /* Vision_textRecognition_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23154D622A315CF800D4A858 /* Vision_textRecognition_AppUITestsLaunchTests.swift */; };
 		23154D702A36CA6C00D4A858 /* Scan_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23154D6F2A36CA6C00D4A858 /* Scan_Data.swift */; };
+		23A0E4AA2A425B420077D156 /* ScannerView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0E4A92A425B420077D156 /* ScannerView .swift */; };
+		23A0E4AC2A4265A90077D156 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0E4AB2A4265A90077D156 /* TextRecognizer.swift */; };
+		23A0E4AE2A452BB40077D156 /* ImageBasedRequestLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0E4AD2A452BB40077D156 /* ImageBasedRequestLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,10 @@
 		23154D602A315CF800D4A858 /* Vision_textRecognition_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision_textRecognition_AppUITests.swift; sourceTree = "<group>"; };
 		23154D622A315CF800D4A858 /* Vision_textRecognition_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision_textRecognition_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		23154D6F2A36CA6C00D4A858 /* Scan_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan_Data.swift; sourceTree = "<group>"; };
+		23A0E4A82A425AF80077D156 /* Vision-textRecognition-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Vision-textRecognition-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		23A0E4A92A425B420077D156 /* ScannerView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScannerView .swift"; sourceTree = "<group>"; };
+		23A0E4AB2A4265A90077D156 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		23A0E4AD2A452BB40077D156 /* ImageBasedRequestLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBasedRequestLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +103,13 @@
 		23154D442A315CF600D4A858 /* Vision_textRecognition_App */ = {
 			isa = PBXGroup;
 			children = (
-				23154D452A315CF600D4A858 /* Vision_textRecognition_AppApp.swift */,
+				23A0E4A82A425AF80077D156 /* Vision-textRecognition-App-Info.plist */,
+				23A0E4AD2A452BB40077D156 /* ImageBasedRequestLocation.swift */,
 				23154D472A315CF600D4A858 /* ContentView.swift */,
+				23154D452A315CF600D4A858 /* Vision_textRecognition_AppApp.swift */,
 				23154D6F2A36CA6C00D4A858 /* Scan_Data.swift */,
+				23A0E4A92A425B420077D156 /* ScannerView .swift */,
+				23A0E4AB2A4265A90077D156 /* TextRecognizer.swift */,
 				23154D492A315CF800D4A858 /* Assets.xcassets */,
 				23154D4B2A315CF800D4A858 /* Preview Content */,
 			);
@@ -260,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A0E4AE2A452BB40077D156 /* ImageBasedRequestLocation.swift in Sources */,
 				23154D482A315CF600D4A858 /* ContentView.swift in Sources */,
 				23154D462A315CF600D4A858 /* Vision_textRecognition_AppApp.swift in Sources */,
+				23A0E4AC2A4265A90077D156 /* TextRecognizer.swift in Sources */,
+				23A0E4AA2A425B420077D156 /* ScannerView .swift in Sources */,
 				23154D702A36CA6C00D4A858 /* Scan_Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,11 +438,13 @@
 				DEVELOPMENT_TEAM = 73J8QZ9U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vision-textRecognition-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,11 +469,13 @@
 				DEVELOPMENT_TEAM = 73J8QZ9U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vision-textRecognition-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
